@@ -1,0 +1,41 @@
+body {
+  background-image: url("https://media.istockphoto.com/photos/gradient-with-black-pearl-blue-color-modern-texture-background-picture-id1063685792?k=20&m=1063685792&s=170667a&w=0&h=qKyLQvQHLqGVOk6uwYMAiP2qaQb8WFnNzBNRXPOcc6g=");
+  background-size: auto 100vh;
+  font-family: Arial;
+  height: 100vh;
+}
+.titulo-site {
+  color: whitesmoke;
+  text-align: center;
+}
+
+.subtitulo-site {
+  text-align: center;
+  font-style: italic;
+  color: white;
+}
+
+.menu {
+  background-color: white;
+}
+
+.menu li {
+  list-style: none;
+}
+
+.elemento2 {
+  margin: 100px;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  color: teal;
+}
+a:hover {
+  color: red;
+}
