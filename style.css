@@ -4,13 +4,39 @@
     box-sizing: border-box;
 }
 
+a {
+
+  text-decoration: none;
+
+}
+
 
 body {
   background-image: url("https://media.istockphoto.com/photos/gradient-with-black-pearl-blue-color-modern-texture-background-picture-id1063685792?k=20&m=1063685792&s=170667a&w=0&h=qKyLQvQHLqGVOk6uwYMAiP2qaQb8WFnNzBNRXPOcc6g=");
-  background-size: auto 113vh;
+  background-size: 1000vh;
   font-family: Arial;
   height: 100vh;
   font-family: 'Inconsolata', monospace;
+}
+
+@media (min-width: 0px) {
+  .apresentacao img{
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    margin:auto;
+  }
+  
+}
+
+@media (min-width: 250px) {
+  .apresentacao img{
+    height: 250px;
+    border-radius: 50%;
+    display: block;
+    margin:auto;
+  }
+  
 }
 
 @media (min-width: 400px) {
@@ -18,7 +44,16 @@ body {
     font-size: 20px;
     justify-content: space-around;
   }
+  .apresentacao img{
+    height: 300px;
+    border-radius: 50%;
+    display: block;
+    margin:auto;
+  }
+  
 }
+
+
 
 @media (min-width: 600px) {
   .menu ul {
@@ -29,6 +64,31 @@ body {
   body {
     font-size: 30px;
   }
+  .apresentacao img{
+    height: 400px;
+    border-radius: 50%;
+    display: block;
+    margin:auto;
+  }
+  
+}
+
+@media (min-width: 800px) {
+  .menu ul {
+    display: flex;
+    justify-content: space-around;
+    font-size: 30px;
+  }
+  body {
+    font-size: 35px;
+  }
+  .apresentacao img{
+    height: 600px;
+    border-radius: 50%;
+    display: block;
+    margin:auto;
+  }
+  
 }
 
 header {
@@ -39,24 +99,44 @@ header {
   flex-wrap: wrap;
 }
 
-.titulo-site {
+.apresentacao h1{
   color: whitesmoke;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
 }
 
-.subtitulo-site {
+.apresentacao h2{
   text-align: center;
   color: white;
   font-style: italic;
   font-family: 'Roboto', sans-serif;
 }
 
+
+
+.apresentacao {
+  transform: scale(1) translateY(15vh);
+  opacity: 0;
+
+  animation: 1s linear 2s animacaoTitulo forwards;
+}
+
+@keyframes animacaoTitulo {
+
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
 .menu {
   background-color: white;
   position: fixed;
   top: 0;
   width: 100vw;
+  z-index: 1;
 }
 
 .menu li {
@@ -79,10 +159,14 @@ header {
   padding: 10px;
   text-decoration: none;
   color: teal;
+  transition: background-color 1s, color 0.5s;
 }
-a:hover {
-  color: red;
+
+.menu a:hover {
+  background-color: teal;
+  color: white;
 }
+
 
 
 .img-portfolio {
@@ -127,6 +211,7 @@ a:hover {
     height: 300px;
     padding-left: 10px;
   }
+  
   .portfolio .grid {
     grid-template-columns: repeat(3, 550px);
     justify-content: center;
@@ -135,12 +220,15 @@ a:hover {
   }
 }
 
+.contatos,
 .portfolio .grid {
   display: grid;
   color: white;
   padding: 2em;
 }  
 
+
+.contatos h2,
 .portfolio h2 {
   color: whitesmoke;
   margin-bottom: 2em;
@@ -152,11 +240,34 @@ a:hover {
 .portfolio figure {
   text-align: center;
   padding: 1em;
+  transition: transform 1.5s;
 }
 
 .portfolio img {
   border-radius: 5%;
 }
+
+
+.portfolio figure:hover {
+  transform: scale(1.2)
+}
+
+.contatos a{
+  color: whitesmoke;
+  font-size: 3em;
+  transition: 1s;
+}
+
+.contatos a:active,
+.contatos a:hover{
+  text-shadow: 0px 10px 10px blue;
+  
+}
+
+.contatos .icons {
+  text-align: center;
+}
+
 
 
 
